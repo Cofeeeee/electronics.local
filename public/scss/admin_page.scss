@@ -1,0 +1,149 @@
+* {
+	font-family: Arial, sans-serif;
+	box-sizing: border-box;
+}
+
+body {
+	background: #f4f4f4;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	margin: 0;
+}
+
+.container {
+	background: white;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+	width: 350px;
+	text-align: center;
+}
+
+h2 {
+	margin-bottom: 15px;
+	color: #333;
+}
+
+input, textarea, select {
+	width: 100%;
+	padding: 10px;
+	margin: 10px 0;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	font-size: 16px;
+}
+
+button {
+	background: #007bff;
+	color: white;
+	border: none;
+	padding: 10px 15px;
+	font-size: 16px;
+	border-radius: 5px;
+	cursor: pointer;
+	width: 100%;
+}
+
+button:hover {
+	background: #0056b3;
+}
+
+/* Стилі для повідомлень про успіх (покращений вигляд) */
+.success-message {
+	color: #155724;
+	background-color: #d4edda;
+	border: 1px solid #c3e6cb;
+	padding: 15px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	text-align: center;
+}
+
+/* Стилі для повідомлень про помилку (покращений вигляд) */
+.error-message {
+	color: #721c24;
+	background-color: #f8d7da;
+	border: 1px solid #f5c6cb;
+	padding: 15px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.back-link {
+	display: block;
+	margin-top: 10px;
+	text-decoration: none;
+	color: #007bff;
+}
+
+.back-link:hover {
+	text-decoration: underline;
+}
+
+.menu {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.menu a {
+	text-decoration: none;
+	color: #007bff;
+	font-size: 16px;
+}
+
+.menu a:hover {
+	text-decoration: underline;
+}
+
+.success-message {
+	color: green;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+.error-message {
+	color: red;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+.existing-offer {
+	border: 1px solid #ccc;
+	padding: 15px;
+	margin-bottom: 15px;
+	border-radius: 5px;
+	background-color: #f9f9f9;
+}
+.existing-offer p {
+	margin: 5px 0;
+}
+.existing-offer label {
+	margin-right: 10px;
+}
+.existing-offer select {
+	margin-right: 10px;
+	padding: 5px;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+}
+.existing-offer button {
+	padding: 5px 10px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+.existing-offer button:hover {
+	background-color: #0056b3;
+}
+.existing-offer button:disabled {
+	background-color: #cccccc;
+	cursor: not-allowed;
+}
+.status-message {
+	font-size: 0.9em;
+}

@@ -1,0 +1,111 @@
+// Обнуление
+@import "_nullstyle";
+
+// Стили хедер
+@import "_header";
+
+.promotion {
+	&__action {
+		background: url('../img/3.png') no-repeat center;
+		background-size: 1920px;
+		height: 372px;
+	}
+
+	&__row {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__title {
+		padding-top: 80px;
+		margin-bottom: 30px;
+		text-align: center;
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 30px;
+	}
+
+	&__text {
+		line-height: 47px;
+		text-align: center;
+		color: #fff;
+		font-size: 30px;
+		p:first-child {
+			text-transform: uppercase;
+		}
+	}
+
+	&__mail {
+		margin: 0 auto;
+		width: 59%;
+		margin-top: 20px;
+		display: flex;
+		justify-content: space-between;
+		input {
+			font-size: 17px;
+			padding-left: 15px;
+			height: 49px;
+			width: 71%;
+			color: #fff;
+			border: 2px solid #fff;
+			background: rgba(0, 0, 0, 0);
+			&::placeholder {
+				color: #fff;
+			}
+		}
+		button {
+			font-weight: bold;
+			margin-left: -484px;
+			font-size: 17px;
+			height: 49px;
+			width: 29%;
+			background: #fff;
+		}
+	}
+}
+
+.condition {
+	&__column {
+		height: 250px;
+		button {
+			margin-top: 40px;
+			font-weight: bold;
+			font-size: 17px;
+			height: 49px;
+			width: 150px;
+			background: #f2f3f4;
+			border-radius: 5px;
+		}
+	}
+
+	&__title {
+		text-decoration: underline;
+		padding-top: 40px;
+		font-size: 24px;
+		text-align: center;
+	}
+
+	&__text {
+		text-align: center;
+		margin-top: 40px;
+		font-size: 18px;
+	}
+}
+
+// Стили футер
+@import "_footer";
+
+// Стили формы
+@import "_form";
+
+@media (max-width: 991.98px){
+	.promotion__mail{
+		input{
+			width: 61%;
+		}
+
+		button{
+			width: 39%;
+		}
+	}
+}

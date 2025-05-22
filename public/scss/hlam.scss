@@ -1,0 +1,236 @@
+// Обнуление
+@import "_nullstyle";
+
+// Стили хедер
+@import "_header";
+
+.wrapper{
+	background: lightyellow;
+}
+
+.CSS6 {
+	padding: 40px 20px 0 20px;
+}
+
+.text {
+	padding-top: 20px;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.element:first-child::first-letter,
+.element:nth-child(4)::first-letter,
+.element:nth-child(7)::first-letter {
+	font-size: 32px;
+	color: red;
+	line-height: normal;
+}
+
+.element:nth-child(2) {
+	font-style: italic;
+	text-decoration: underline;
+}
+
+.CSS7__row {
+	padding: 40px 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.song {
+	border: 1px solid #000;
+	background: #dae3da;
+	padding: 50px 0 10px 35px;
+	width: 45%;
+	&__bg {
+		background: url('../img/kozak_rotated.png');
+		background-repeat: no-repeat;
+		background-position: 330px center;
+		background-size: 220px;
+	}
+
+	p {
+		font-size: 16px;
+		line-height: 1.5;
+		padding-top: 10px;
+		&:first-child {
+			padding-top: 0;
+		}
+	}
+}
+
+.portret {
+	width: 200px;
+	height: 200px;
+	overflow: scroll;
+}
+
+.blue {
+	display: flex;
+	height: 100px;
+	width: 300px;
+	background: blue;
+	color: yellow;
+	justify-content: center;
+	align-items: center;
+	&:hover {
+		box-shadow: 0 -4px 8px 0 #000;
+		transition-duration: 0.5s;
+		p {
+			margin-right: 0;
+			transition-duration: 0.5s;
+		}
+	}
+
+	p {
+		margin-right: 900px;
+		overflow: hidden;
+	}
+}
+
+.yellow {
+	display: flex;
+	height: 100px;
+	width: 300px;
+	background: yellow;
+	color: blue;
+	justify-content: center;
+	align-items: center;
+	&:hover {
+		box-shadow: 0 4px 8px 0 #000;
+		transition-duration: 0.5s;
+		p {
+			margin-left: 0;
+			transition-duration: 0.5s;
+		}
+	}
+
+	p {
+		margin-left: 900px;
+		overflow: hidden;
+	}
+}
+
+.blocks {
+	position: relative;
+	margin-top: 80px;
+}
+
+.block {
+	position: absolute;
+	height: 160px;
+	width: 250px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 0;
+	opacity: 0.97;
+	&:hover {
+		z-index: 3;
+		opacity: 1;
+		font-size: 24px;
+		transform: rotate(360deg);
+		transition-duration: 0.5s;
+	}
+}
+
+.block1 {
+	right: -10px;
+	z-index: 3;
+	background-color: #fff;
+	border: 1px dotted #000;
+}
+
+.block2 {
+	top: 50px;
+	right: 130px;
+	z-index: 2;
+	background-color: #d7d7d7;
+	border: 1px dashed #000;
+}
+
+.block3 {
+	top: 130px;
+	left: -10px;
+	z-index: 1;
+	background-color: #808080;
+	border: 1px solid #000;
+}
+
+.block4 {
+	top: 90px;
+	left: 130px;
+	background-color: #49423D;
+}
+
+.portret::-webkit-scrollbar {
+	width: 12px;
+	height: 12px;
+}
+
+.portret::-webkit-scrollbar-track {
+	background: yellow;
+}
+
+.portret::-webkit-scrollbar-thumb {
+	background-color: blue;
+	border-radius: 10px;
+	border: 3px solid blue;
+}
+
+.PHP10{
+	padding: 0 20px 40px;
+}
+
+.cot{
+	width: 347px;
+	margin: 0 auto;
+	background-color: #8694c1;
+	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+	&_output{
+		text-align: center;
+		padding: 15px;
+		margin-top: 25px;
+		margin-bottom: 50px;
+		color: #000;
+	}
+}
+
+.text1{
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.generate{
+	text-align: center;
+	h2{
+		text-align: center;
+		margin-top: 77px;
+		color: #000;
+		font-size: 24px;
+	}
+
+	img{
+		height: 256px;
+	}
+}
+
+#generate-btn{
+	font-size: 17px;
+	width: 168px;
+	margin: 25px 0;
+	padding: 10px;
+}
+
+#laptop-container{
+	text-align: center;
+}
+
+// Стили футер
+@import "_footer";
+
+// Стили формы
+@import "_form";

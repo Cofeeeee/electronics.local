@@ -1,0 +1,12 @@
+<svg width="51" height="39" viewBox="0 0 51 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="26.5" y="20" width="24" height="16" rx="6" fill="#75EADC"/>
+<rect x="26.5" y="3" width="24" height="16" rx="6" fill="#75EADC"/>
+<rect x="26.5" y="14" width="10" height="5" fill="#75EADC"/>
+<rect x="26.5" y="20" width="10" height="5" fill="#75EADC"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M17.5 19L3.25735 4.75736C4.34313 3.67158 5.84313 3 7.49998 3H19.5C22.8137 3 25.5 5.68629 25.5 9V13C25.5 16.3137 22.8137 19 19.5 19H17.5Z" fill="#75EADC"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M25.5 19H17.5L15.5 17V14H25.5V19Z" fill="#75EADC"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15.5 25V22L17.5 20H25.5V25H15.5Z" fill="#75EADC"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.49998 36C5.84314 36 4.34315 35.3284 3.25736 34.2427L17.5 20H19.5C22.8137 20 25.5 22.6863 25.5 26V30C25.5 33.3137 22.8137 36 19.5 36H7.49998Z" fill="#75EADC"/>
+<path d="M10.5 27L19.5933 36H1.40673L10.5 27Z" fill="#75EADC"/>
+<path d="M10.5 12L1.40673 3L19.5933 3L10.5 12Z" fill="#75EADC"/>
+</svg>

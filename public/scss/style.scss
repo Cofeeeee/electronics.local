@@ -1,0 +1,304 @@
+// Обнуление
+@import "_nullstyle";
+
+// Стили хедер
+@import "_header";
+
+.products{
+	padding-block: 5rem;
+}
+
+.products__title {
+	padding-bottom: 2.5rem;
+}
+
+.products__row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.25rem;
+	// justify-content: space-between;
+}
+
+.product__card {
+	width: calc(25% - 0.9375rem); /* 4 карточки в ряд */
+	padding: 0.9375rem;
+	border: 1px solid #ddd;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Начальная тень */
+	transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавный эффект */
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+}
+
+.product__card.unavailable {
+	opacity: 0.5;
+	pointer-events: none;
+	filter: grayscale(100%);
+}
+
+.product__card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Увеличенная тень */
+}
+
+/* Контейнер для изображения карточки товара */
+.image-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%; /* Растягиваем контейнер */
+	aspect-ratio: 4 / 3; /* Устанавливаем пропорции */
+	overflow: hidden;
+}
+
+.product__card img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain; /* Подгоняет изображение внутрь, сохраняя пропорции */
+}
+
+.product__card h3, .slider__item h3 {
+	margin: 1.25rem 0 0.625rem;
+	display: -webkit-box;            /* Для WebKit/Chrome/Safari */
+	line-clamp: 2;
+	-webkit-line-clamp: 2;           /* Ограничение в 2 строки для WebKit */
+	-webkit-box-orient: vertical;    /* Для WebKit */
+	overflow: hidden;                /* Скрытие текста, выходящего за пределы */
+	text-overflow: ellipsis;         /* Добавление многоточия */
+}
+
+.product__body {
+	display: flex;
+	justify-content: space-between;
+}
+
+.product__price {
+	font-size: 1.5rem;
+	color: #000;
+	font-weight: 700;
+}
+
+.product__price-currency {
+	font-size: 1.2rem;
+}
+
+.add-btn {
+	padding-inline: 0.625rem;
+	background: #008CBA;
+	color: #fff;
+	line-height: 1;
+	border: none;
+	border-radius: 0.3125rem;
+	cursor: pointer;
+	transition: background 0.3s;
+	&:hover {
+		background: #007bb5;
+	}
+}
+
+/* Ограничительная оболочка */
+.slick-list {
+	overflow: hidden;
+	padding: 1.25rem; /* Добавляем небольшой внутренний отступ */
+	margin: -1.25rem; /* Смещаем обратно, чтобы не было лишнего места */
+}
+
+/* Лента слайдов */
+.slick-track{
+	display: flex;
+}
+
+/* Слайд */
+.slick-slide{
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Начальная тень */
+	transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавный эффект */
+	&:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Увеличенная тень */
+	}
+}
+
+.slider {
+	&__category {
+		margin-top: 1.25rem;
+		position: relative;
+		.slick-arrow{
+			position: absolute;
+			top: 50%;
+			z-index: 10;
+			font-size: 0;
+			width: 1.875rem;
+			height: 3.75rem;
+			margin-top: -1.875rem;
+			&.slick-prev{
+				left: 0;
+				background: url('../img/sl-arrow_l_color_f2f3f4.svg') 0 0/100% no-repeat;
+			}
+			&.slick-next{
+				right: 0;
+				background: url('../img/sl-arrow_r_color_f2f3f4.svg') 0 0/100% no-repeat;
+			}
+		}
+
+		.slick-dots{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.slick-dots li{
+			margin: 0 10px;
+		}
+
+		.slick-dots li button{
+			font-size: 0;
+			width: 0.625rem;
+			height: 0.625rem;
+			background-color: #f2f3f4;
+			border-radius: 50%;
+		}
+
+		.slick-dots li.slick-active button{
+			background-color: transparent;
+			border: 1px solid #f2f3f4;
+		}
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		&:nth-child(2) {
+			margin: 20px 0;
+		}
+	}
+
+	&__item {
+		max-width: 20rem;
+		margin-block: 1.25rem;
+		border: none;
+		padding: 0.9375rem;
+		img {
+			max-height: 12.5rem;
+		}
+	}
+}
+
+.info {
+	padding-block: 5rem;
+	&__list {
+		margin-top: 2.5rem;
+		margin-left: 1.25rem;
+		li {
+			color: #838383;
+			margin-top: 0.625rem;
+			list-style: circle;
+			&:first-child{
+				margin-top: 0;
+			}
+		}
+	}
+	
+	p {
+		color: #838383;
+		&:nth-child(2) {
+			margin-top: 1.25rem;
+		}
+	}
+}
+
+
+.subscribe {
+	padding: 40px 0;
+	background-color: #f8f9fa;
+	text-align: center;
+	border-top: 1px solid #ddd;
+}
+.subscribe__title {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+.subscribe__text {
+	font-size: 16px;
+	margin-bottom: 20px;
+	color: #555;
+}
+.subscribe__form {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+.subscribe__form input[type="email"] {
+	padding: 10px;
+	font-size: 16px;
+	width: 300px;
+	max-width: 100%;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+.subscribe__form button {
+	padding: 10px 20px;
+	font-size: 16px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background 0.3s;
+}
+.subscribe__form button:hover {
+	background-color: #0056b3;
+}
+#subscribe-message {
+	margin-top: 10px;
+	color: green;
+	font-weight: bold;
+}
+
+
+// 1200px / 75em
+@media (max-width: 75em) {
+	.product__card {
+		width: calc(33.33% - 0.9375rem);
+	}
+}
+
+// 992px / 62em
+// @media (max-width: 992px) {}
+
+// 768px / 48em
+@media (max-width: 48em) {
+	.product__card {
+		width: calc(50% - 0.9375rem);
+	}
+
+	// Убираем отступы для визуального отделения стрелок (теперь они налезут на область карт товаров)
+	.slider__category {
+		padding-inline: 0;
+	}
+}
+
+// 480px / 30em - мобилки
+@media (max-width: 30em) {
+	// Падинги для секции
+	.products{
+		padding-block: 2.5rem;
+	}
+
+	// Ширина сотка для карт товаров без слайдера
+	.product__card {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	// Падинги для секции
+	.info {
+		padding-block: 2.5rem;
+	}
+}
+
+// Стили футер
+@import "_footer";
+
+// Стили формы
+@import "_form";

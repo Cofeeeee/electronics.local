@@ -1,0 +1,101 @@
+// Обнуление
+@import "_nullstyle";
+
+// Стили хедер
+@import "_header";
+
+.map {
+	padding: 80px 0;
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 25px;
+	}
+
+	&__body {
+		padding-right: 30px;
+	}
+
+	&__text p {
+		padding-top: 10px;
+		font-size: 16px;
+		line-height: 1.5;
+		&:first-child {
+			padding-top: 0;
+		}
+	}
+}
+
+.info {
+	padding-bottom: 10px;
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__contacts {
+		display: flex;
+		img {
+			width: 32px;
+		}
+		a:last-child{
+			padding-left: 5px;
+		}
+	}
+
+	&__schedule{
+		padding-top: 10px;
+	}
+
+	h3{
+		font-size: 18px;
+		font-weight: 700;
+	}
+
+	a{
+		color: #000;
+	}
+}
+
+.contacts {
+	&__tell,
+	&__mail {
+		display: flex;
+		align-items: center;
+		p{
+			display: flex;
+			align-items: center;
+			padding-right: 20px;
+		}
+	}
+
+	&__mail p{
+		padding-right: 0;
+	}
+}
+
+.schedule__body p {
+	padding-top: 10px;
+	letter-spacing: 1.2px;
+}
+
+.about {
+	padding-top: 10px;
+}
+
+// Стили футер
+@import "_footer";
+
+// Стили формы
+@import "_form";
+
+@media (max-width: 1200px){
+	.map__row{
+		flex-direction: column;
+		iframe{
+			width: 100%;
+			margin-top: 25px;
+		}
+	}
+}

@@ -1,0 +1,180 @@
+.wrapper {
+	font-family: 'Inter', sans-serif;
+	background: #fcfcfc;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.content {
+	flex: 1 1 auto;
+}
+
+.container {
+	padding-inline: 15px;
+	max-width: 75rem;
+	margin: 0 auto;
+}
+
+h1 {
+	font-size: 1.5rem;
+	color: #fff;
+	text-align: center;
+}
+
+h2 {
+	font-size: 1.5rem;
+}
+
+.login-user {
+	margin-left: 0.3125rem;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	color: #008CBA;
+}
+
+.logout-user {
+	margin-left: 0.3125rem;
+	.open-popup{
+		margin-left: 0;
+	}
+}
+
+.intro__logo img{
+	width: 10.4375rem;
+}
+
+.intro {
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 4.125rem; // 66px
+		background-color: #000;
+		padding-inline: 0.625rem;
+	}
+
+	&__title {
+		padding-inline: 0.625rem;
+	}
+
+	&__enter{
+		display: flex;
+		&__basket {
+			display: flex;
+			align-items: center;
+			width: 2rem;
+			position: relative; /* Для абсолютного позиціонування елемента з кількістю товарів */
+			img{
+				width: 2rem;
+			}
+			/* Стилі для кількості товарів у кошику */
+			.cart-count {
+				position: absolute;
+				top: -0.3125rem;
+				right: -0.625rem;
+				background: red;
+				color: white;
+				font-size: 0.75rem;
+				font-weight: bold;
+				border-radius: 50%;
+				width: 1.25rem;
+				height: 1.25rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				transition: transform 0.2s ease;
+			}
+			.cart-count.hidden {
+				display: none;
+			}
+			.cart-count.updated {
+				transform: scale(1.3) rotate(10deg);
+			}
+		}
+	
+		&__body{
+			display: flex;
+		}
+	}
+
+	&__menu {
+		display: flex;
+		align-items: center;
+		background-color: #f2f3f4;
+		height: 3.625rem; // 58px
+	}
+
+	&__list {
+		max-width: 39.25rem; // 628px
+		margin: 0 auto;
+		ul {
+			display: flex;
+		}
+		a {
+			padding: 1.25rem 1.5625rem;
+			color: #000;
+			&:hover {
+				border-bottom: 1px solid #838383;
+			}
+		}
+	}
+}
+
+.open-popup {
+	margin-left: 0.3125rem;
+	padding: 0.625rem 1.25rem;
+	background: #008CBA;
+	color: #fff;
+	line-height: 1;
+	border: none;
+	border-radius: 0.3125rem;
+	cursor: pointer;
+	transition: background 0.3s;
+	&:hover {
+		background: #007bb5;
+	}
+}
+
+// 1200px → 75em
+@media (max-width: 75em){
+	.container{
+		max-width: 62rem; // 992px
+	}
+}
+
+// 992px → 62em
+@media (max-width: 62em){
+	.container{
+		max-width: 48rem; // 768px
+	}
+
+	.intro__title{
+		padding-inline: 0.3125rem;
+	}
+
+	.open-popup {
+		padding: 0.625rem 0.9375rem;
+	}
+}
+
+// 768px → 48em
+@media (max-width: 48em){
+	.container{
+		max-width: 36rem; // 576px
+	}
+
+	.intro__title {
+		display: none;
+	}
+}
+
+// 480px → 30em
+@media (max-width: 30em){
+	.container {
+		max-width: 100%;
+		padding-inline: 10px; /* Чтобы контент не прилипал к краям */
+	}
+}
